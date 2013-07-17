@@ -8,5 +8,11 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :overage
 
-  validates :overage, acceptance: { message: "!!!  You Must Be Over 21 To Join" }
+  #validate :over_21
+  #validates :overage, :acceptance => true, { :message => "you must be 21!" }
+  validates :overage, :acceptance => { :accept => true, :message => "you must be at least 21 years old" }
+
+  # def over_21
+  #   self.errors[:overage] = "you must be at least 21 years old" unless self.overage
+  # end
 end

@@ -2,12 +2,15 @@ require 'spec_helper'
 
 describe User do
 
+  let!(:underage_user) { FactoryGirl.build(:underage_user) }
+
   before(:each) do
     @attr = {
       :name => "Example User",
       :email => "user@example.com",
       :password => "changeme",
-      :password_confirmation => "changeme"
+      :password_confirmation => "changeme",
+      :overage => true
     }
   end
 
@@ -37,6 +40,7 @@ describe User do
   end
 
   it "should reject duplicate email addresses" do
+    p User.new(@attr)
     User.create!(@attr)
     user_with_duplicate_email = User.new(@attr)
     user_with_duplicate_email.should_not be_valid
@@ -98,6 +102,16 @@ describe User do
       @user.encrypted_password.should_not be_blank
     end
 
+  end
+
+  context "Over age confirmation" do
+    it "should be valid if age over 21" do
+      expect(User.new(@attr)).to be_valid
+    end
+
+    it "should be invalid if age under 21" do
+      expect(underage_user).to be_invalid
+    end
   end
 
 end
