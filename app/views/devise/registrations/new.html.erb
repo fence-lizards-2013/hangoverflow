@@ -14,6 +14,9 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
+  <div><%= f.label :overage, "Are you over 21?" %><br />
+  <%= f.check_box :overage %></div>
+
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
