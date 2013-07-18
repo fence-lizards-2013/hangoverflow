@@ -10,7 +10,7 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = current_user.cocktails.create params[:cocktail]
-    redirect @cocktail
+    redirect_to @cocktail
   end
 
   def edit
