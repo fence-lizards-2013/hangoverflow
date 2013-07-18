@@ -5,4 +5,9 @@ class Cocktail < ActiveRecord::Base
   has_many :votes
 
   accepts_nested_attributes_for :ingredients 
+
+  def update_vote_score!(value)
+  	vote_score += value
+  	vote_score.save
+  end
 end

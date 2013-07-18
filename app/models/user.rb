@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   def update_reputation!
     reputation = 0
     cocktails.each do |cocktail|
-      reputation += cocktail.votes if cocktail.votes
+      reputation += cocktail.vote_score if cocktail.vote_score
     end
     self.save
   end
