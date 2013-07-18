@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :cocktails
+  accepts_nested_attributes_for :cocktails 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
