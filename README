@@ -1,18 +1,25 @@
 Hangoverflow
 ========================
 
-This application was generated with the rails_apps_composer gem:
-https://github.com/RailsApps/rails_apps_composer
-provided by the RailsApps Project:
-http://railsapps.github.io/
+This application is meant to provide a searchable drink database through an easy to use interface. We allow for users to create drinks and gain reputation from the popularity of their drinks. Users with an account can vote on drinks which give the drink a popularity rating as well.
 
 ________________________
 
-Recipes:
-["apps4", "controllers", "core", "email", "extras", "frontend", "gems", "git", "init", "models", "prelaunch", "railsapps", "readme", "routes", "saas", "setup", "testing", "views"]
+Feature Checklist:
 
-Preferences:
-{:git=>true, :railsapps=>"rails3-devise-rspec-cucumber", :database=>"sqlite", :unit_test=>"rspec", :integration=>"cucumber", :fixtures=>"factory_girl", :frontend=>"none", :email=>"gmail", :authentication=>"devise", :devise_modules=>"default", :authorization=>"none", :starter_app=>"users_app", :form_builder=>"none", :quiet_assets=>true, :local_env_file=>true, :better_errors=>true, :dev_webserver=>"webrick", :prod_webserver=>"thin", :templates=>"erb", :continuous_testing=>"none", :rvmrc=>false, :ban_spiders=>true}
+- [ ] User can add a recipe
+- [ ] User can vote on a recipe
+- [ ] User can gather reputation
+- [ ] User can have their picture automatically added to their profile through gravatar
+- [ ] User can view another user's profile
+- [ ] User can edit their profile
+- [ ] User can navigate the website through a navbar
+- [ ] User can view top drinks (based on popularity)
+- [ ] User can downvote after gaining x reputation
+- [ ] User can signup through facebook
+- [ ] User can follow other users
+- [ ] User can upload a photo for their recipe
+- [ ] User can search for a drink by ingredients, strength, keyword, or name
 
 ________________________
 
