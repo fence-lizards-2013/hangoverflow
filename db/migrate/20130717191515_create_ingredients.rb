@@ -5,8 +5,6 @@ class CreateIngredients < ActiveRecord::Migration
       t.integer :quantity
       t.string :unitofmeasurement
       t.references :cocktail
-      t.references :user
-      t.references :votes
 
       t.timestamps
     end
