@@ -18,4 +18,12 @@ class User < ActiveRecord::Base
   # def over_21
   #   self.errors[:overage] = "you must be at least 21 years old" unless self.overage
   # end
+
+  def update_reputation
+    cocktails = Cocktail.where('user_id = ?',id)
+    cocktails.each do |cocktail|
+      reputation += cocktail.votes if cocktail.votes
+    end
+  end
+
 end
