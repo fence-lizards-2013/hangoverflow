@@ -1,0 +1,11 @@
+<%= form_for @cocktail do |f| %>
+  <%= f.text_field :name, placeholder: "Drink Name"%>
+  <%= f.text_field :description %>
+  <%= f.text_field :instructions %>
+  <%= f.fields_for :ingredients do |i| %>
+    <%= i.text_field :name %>
+    <%= i.text_field :quantity %>
+    <%= i.text_field :unitofmeasurement %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
