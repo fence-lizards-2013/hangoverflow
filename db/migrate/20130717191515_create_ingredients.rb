@@ -3,7 +3,7 @@ class CreateIngredients < ActiveRecord::Migration
     create_table :ingredients do |t|
       t.string :name
       t.integer :quantity
-      t.string :unitofmeasurement
+      t.string :unit_of_measurement
       t.references :cocktail
 
       t.timestamps

@@ -5,7 +5,6 @@ class CreateCocktails < ActiveRecord::Migration
       t.string :description
       t.string :instructions
       t.references :user
-      t.references :votes
 
       t.timestamps
     end

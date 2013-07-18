@@ -1,12 +1,5 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+<h3>All of the alcohols!!</h3>
 
 <ul>
-  <% @cocktails.each do |cocktail| %>
-		<li> <%= link_to cocktail.name, cocktail %> </li>
-  <% end %>
+	<%= render @cocktails %>
 </ul>
-
-

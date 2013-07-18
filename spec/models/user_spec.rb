@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe User do
 
+  let!(:user) { FactoryGirl.build(:user) }
   let!(:underage_user) { FactoryGirl.build(:underage_user) }
 
   before(:each) do
@@ -104,9 +105,9 @@ describe User do
 
   end
 
-  context "Over age confirmation" do
+  context "Age Validations" do
     it "should be valid if age over 21" do
-      expect(User.new(@attr)).to be_valid
+      expect(user).to be_valid
     end
 
     it "should be invalid if age under 21" do
