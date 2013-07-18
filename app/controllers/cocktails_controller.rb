@@ -1,5 +1,9 @@
 class CocktailsController < ApplicationController
 
+  def index 
+    @cocktails = Cocktail.all
+  end
+
   def new
     @cocktail = Cocktail.new
     @cocktail.ingredients << Ingredient.new
@@ -20,6 +24,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @cocktail = Cocktail.find(params[:id])
   end
 
   def update
