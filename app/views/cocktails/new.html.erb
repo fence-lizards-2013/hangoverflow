@@ -10,10 +10,12 @@
     <%= f.text_area :instructions %>
 
     <div class="ingredients_wrapper">
+      <%= f.fields_for :ingredients do |builder| %>
+        <%= render 'ingredient', f: builder %>
+      <% end %>
     </div>
 
-    <%= link_to "Add Ingredient", new_ingredient_path, id: "add_ingredient" %>
-
+    <%= link_to_add_fields "Add Ingredient", f , :ingredients %>
     <%= f.submit %>
   <% end %>
 </div>

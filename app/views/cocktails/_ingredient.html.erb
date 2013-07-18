@@ -1,5 +1,8 @@
-<div class="ingredient">
-  <input type="text" name='cocktail[ingredients_attributes][][name]' placeholder="Martini">
-  <input type="text" name='cocktail[ingredients_attributes][][quantity]' placeholder="2">
-  <input type="text" name='cocktail[ingredients_attributes][][unitofmeasurement]' placeholder="lt">
-</div>
+ <fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :quantity %>
+  <%= f.text_field :quantity %>
+  <%= f.label :unitofmeasurement %>
+  <%= f.text_field :unitofmeasurement %>
+</fieldset>
