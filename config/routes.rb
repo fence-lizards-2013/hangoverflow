@@ -6,4 +6,5 @@ HangOverflow::Application.routes.draw do
   devise_for :users
   resources :users
   resources :cocktails
+  resources :ingredients, :only => [:new]
 end

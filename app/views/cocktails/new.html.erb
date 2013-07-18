@@ -1,11 +1,19 @@
-<%= form_for @cocktail do |f| %>
-  <%= f.text_field :name, placeholder: "Drink Name"%>
-  <%= f.text_field :description %>
-  <%= f.text_field :instructions %>
-  <%= f.fields_for :ingredients do |i| %>
-    <%= i.text_field :name %>
-    <%= i.text_field :quantity %>
-    <%= i.text_field :unitofmeasurement %>
+<div class="new_cocktail_form">
+  <%= form_for @cocktail do |f| %>
+    <%= f.label :name %>:
+    <%= f.text_field :name %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+
+    <%= f.label :instructions %>
+    <%= f.text_area :instructions %>
+
+    <div class="ingredients_wrapper">
+    </div>
+
+    <%= link_to "Add Ingredient", new_ingredient_path, id: "add_ingredient" %>
+
+    <%= f.submit %>
   <% end %>
-  <%= f.submit %>
-<% end %>
+</div>

@@ -2,18 +2,11 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
-    @cocktail.ingredients << Ingredient.new
-    @cocktail.ingredients << Ingredient.new
-    @cocktail.ingredients << Ingredient.new
   end
 
   def create
-    @cocktail = Cocktail.new params[:cocktail]
-    p @cocktail
-    p @cocktail.ingredients.first
-    # params[:ingredients].each do |ingredient|
-    #   @cocktail.ingredients.build ingredient
-    # end    
+    @cocktail = current_user.cocktails.create params[:cocktail]
+    redirect @cocktail
   end
 
   def edit

@@ -10,9 +10,6 @@ class User < ActiveRecord::Base
 
   #validate :over_21
   #validates :overage, :acceptance => true, { :message => "you must be 21!" }
-  validates :overage, :acceptance => { :accept => true, :message => "you must be at least 21 years old" }
+  validates :overage, :acceptance => { :accept => "1", :message => "you must be at least 21 years old" }
 
-  # def over_21
-  #   self.errors[:overage] = "you must be at least 21 years old" unless self.overage
-  # end
 end
