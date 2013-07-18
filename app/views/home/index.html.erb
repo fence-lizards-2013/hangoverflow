@@ -3,4 +3,10 @@
   <p>User: <%=link_to user.name, user %></p>
 <% end %>
 
+<ul>
+  <% @cocktails.each do |cocktail| %>
+		<li> <%= link_to cocktail.name, cocktail %> </li>
+  <% end %>
+</ul>
+
 
