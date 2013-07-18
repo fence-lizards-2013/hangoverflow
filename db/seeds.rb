@@ -10,3 +10,7 @@
 puts 'DEFAULT USERS'
 user = User.find_or_create_by_email :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup
 puts 'user: ' << user.name
+
+Cocktail.create(name: "Mojito", description: "Great drink if you have mint lying around.", instructions: "Muddle mint, add all ingredients, DONT SHAKE, stir.")
+Cocktail.create(name: "Cape Fizz", description: "Kind of a girly drink.", instructions: "Put twice as much alcohol in and you won't even taste it..")
+
