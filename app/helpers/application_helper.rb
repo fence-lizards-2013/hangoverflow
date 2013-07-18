@@ -14,4 +14,10 @@ module ApplicationHelper
     link_to(name, '#', class: 'add_fields', data: {id: id, fields: fields.gsub("\n","")})
     #This will link to name (Add Ingredient) with the id and fields as part of the data attribute of the HTML anchor 
   end
+
+  def gravatar_url(user_email)
+    user_email.strip!
+    user_email.downcase!
+    "http://www.gravatar.com/avatar/" + Digest::MD5.hexdigest(user_email)
+  end
 end

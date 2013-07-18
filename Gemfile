@@ -21,6 +21,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
 end
+
 group :production do
   gem 'thin'
 end
@@ -30,4 +31,5 @@ group :test do
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'launchy'
+  gem 'selenium-webdriver'
 end
