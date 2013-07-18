@@ -1,6 +1,7 @@
 class Vote < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :cocktail
+	validates :value, :inclusion => {:in => [-1,1]}
 
 	after_save :update_user_reputation
 
