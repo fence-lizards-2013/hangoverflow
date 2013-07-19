@@ -2,6 +2,7 @@
   Name: <%= cocktail.name %><br>
   Description: <%= cocktail.description %><br>
   <% if current_user === cocktail.user %>
+    <%= link_to "View", cocktail_path(cocktail) %>
     <%= link_to "Edit", edit_cocktail_path(cocktail) %>
     <%= link_to "Delete", cocktail, :class => "delete_cocktail", method: :delete, remote: true %>
   <% end %>
