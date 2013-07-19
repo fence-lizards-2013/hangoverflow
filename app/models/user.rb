@@ -10,7 +10,8 @@ class User < ActiveRecord::Base
   validate :is_overage?
 
   has_many :votes
-  has_many :cocktails
+  has_many :cocktails, :dependent => :destroy
+  has_many :authentications, :dependent => :destroy
 
   def update_reputation!
     reputation = 0
@@ -24,4 +25,12 @@ class User < ActiveRecord::Base
     self.errors[:overage] = "You Must be 21 and over to progress" unless self.overage
   end
 
+  def self.create_from_hash(hash)
+    user = User.create(name: hash.info.name,
+                       email: hash.info.email,
+                       password: SecureRandom.hex(8),
+                       overage: true)
+    user.authentications.create(provider: hash.provider, uid: hash.uid)
+    user
+  end
 end
