@@ -30,7 +30,14 @@ class CocktailsController < ApplicationController
   end
 
   def search
-    User.find
-    render nothing: true
+    non_selected_ingredients = []
+    params[:parameters].each do |k, v|
+      non_selected_ingredients << k if v == 0
+    end
+    non_selected_ingredients.each
+    @cocktails = Ingredient.find_by_name()
+
+
+    
   end
 end
