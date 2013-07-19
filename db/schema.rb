@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(:version => 20130719041534) do
     t.string   "description"
     t.string   "instructions"
     t.integer  "user_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.integer  "vote_score"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.integer  "vote_score",   :default => 0
   end
 
   create_table "ingredients", :force => true do |t|
