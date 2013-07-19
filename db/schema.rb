@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130719041534) do
+ActiveRecord::Schema.define(:version => 20130719191203) do
 
   create_table "authentications", :force => true do |t|
     t.string   "provider"
@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(:version => 20130719041534) do
     t.string   "instructions"
     t.integer  "user_id"
     t.integer  "votes_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.integer  "vote_score"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.integer  "vote_score",   :default => 0
   end
 
   create_table "ingredients", :force => true do |t|
