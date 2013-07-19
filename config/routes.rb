@@ -7,4 +7,6 @@ HangOverflow::Application.routes.draw do
   resources :users
   resources :cocktails
   resources :ingredients, :only => [:new]
+
+  match '/auth/:provider/callback', :to => 'authentications#create'
 end
