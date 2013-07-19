@@ -9,6 +9,9 @@
     <%= f.label :instructions %>
     <%= f.text_area :instructions %>
 
+    <%= cloudinary_js_config %> 
+    <%= f.cl_image_upload(:image_id) %>
+    
     <div class="ingredients_wrapper">
       <%= f.fields_for :ingredients do |builder| %>
         <%= render 'ingredient', f: builder %>

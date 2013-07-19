@@ -7,9 +7,11 @@
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+    <%= cloudinary_js_config %>
     <%= yield(:head) %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
+
     <div id="container" class="container">
       <header>
         <%= render 'layouts/navigation' %>
@@ -21,5 +23,6 @@
       <footer>
       </footer>
     </div> <!--! end of #container -->
+
   </body>
 </html>

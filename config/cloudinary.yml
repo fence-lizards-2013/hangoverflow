@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dl55dq59l
+  api_key: '118386582397125'
+  api_secret: f4miNmyydWSRZON7ePWa5crhmQc
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dl55dq59l
+  api_key: '118386582397125'
+  api_secret: f4miNmyydWSRZON7ePWa5crhmQc
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dl55dq59l
+  api_key: '118386582397125'
+  api_secret: f4miNmyydWSRZON7ePWa5crhmQc
+  enhance_image_tag: true
+  static_image_support: false
