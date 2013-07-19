@@ -1,4 +1,5 @@
 class Cocktail < ActiveRecord::Base
+
   attr_accessible :description, :instructions, :name, :ingredients_attributes, :user_id, :vote_score, :image_id
 
   has_many :ingredients, :dependent => :destroy, inverse_of: :cocktail
@@ -12,7 +13,7 @@ class Cocktail < ActiveRecord::Base
   before_save :save_image
 
   def update_vote_score!(value)
-  	self.vote_score = self.vote_score + value
+  	self.vote_score += value
   	self.save
   end
 
