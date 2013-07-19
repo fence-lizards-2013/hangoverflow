@@ -14,7 +14,7 @@ $(document).ready(function(){
   Cocktail.init();
 
   $('#toggle_search_button').on('click', function() {
-    console.log("you clicked!")
+    $('.search').toggle();
   });
 
 });
