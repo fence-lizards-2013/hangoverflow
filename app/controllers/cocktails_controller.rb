@@ -13,7 +13,13 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    @cocktail = current_user.cocktails.create params[:cocktail]
+    @cocktail = current_user.cocktails.build params[:cocktail]
+      if params[:cocktail][:image_id].present?
+        preloaded = Cloudinary::PreloadedFile.new(params[:cocktail][:image_id])         
+      raise "Invalid upload signature" if !preloaded.valid?
+        @cocktail.image_id = preloaded.identifier
+      end
+      @cocktail.save
     redirect_to @cocktail
   end
 

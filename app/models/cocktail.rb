@@ -1,5 +1,5 @@
 class Cocktail < ActiveRecord::Base
-  attr_accessible :description, :instructions, :name, :ingredients_attributes, :user_id, :vote_score
+  attr_accessible :description, :instructions, :name, :ingredients_attributes, :user_id, :vote_score, :image_id
 
   has_many :ingredients, :dependent => :destroy
   has_many :votes, :dependent => :destroy
