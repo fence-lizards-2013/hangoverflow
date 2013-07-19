@@ -47,5 +47,7 @@ class CocktailsController < ApplicationController
     selected_ingredients.each do |ingredient|
       cocktail_id_numbers << ingredient.cocktail_id unless cocktail_id_numbers.include?(ingredient.cocktail_id)
     end
+
+    @cocktails = Cocktail.find(cocktail_id_numbers)
   end
 end
