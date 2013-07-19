@@ -4,6 +4,10 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
+  def show
+    @cocktail = Cocktail.find(params[:id])
+  end
+
   def new
     @cocktail = Cocktail.new
   end
@@ -14,16 +18,15 @@ class CocktailsController < ApplicationController
   end
 
   def edit
-  end
-
-  def show
-    @cocktail = Cocktail.find(params[:id])
+    @cocktail.find(params[:id])
   end
 
   def update
   end
 
   def destroy
+    Cocktail.destroy(params[:id])
+    render :nothing => true
   end
 
 end

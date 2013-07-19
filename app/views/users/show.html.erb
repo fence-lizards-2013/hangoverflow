@@ -1,12 +1,14 @@
 <h3>User</h3>
+
 <p>User: <%= @user.name %></p>
+
 <p>Email: <%= @user.email if @user.email %></p>
+
 <%= image_tag gravatar_url(@user.email) %>
-<p>List of your cocktails:</p>
-<% if @cocktails %>
-  <ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %><li>
-  <% end %>
-  </ul>
-<% end %>
+
+<h3>Your Cocktails Recipes</h3>
+
+<div class="cocktails">
+  <%= render @cocktails %>
+</div>
+
