@@ -36,12 +36,13 @@ class CocktailsController < ApplicationController
   end
 
   def search
-    non_selected_ingredients = []
+    selected_ingredients = []
     params[:parameters].each do |k, v|
-      non_selected_ingredients << k if v == 0
+      selected_ingredients << k if v == "1"
     end
+
     non_selected_ingredients.each
-    @cocktails = Ingredient.find_by_name()
+      @cocktails = Ingredient.find_by_name()
 
 
     
