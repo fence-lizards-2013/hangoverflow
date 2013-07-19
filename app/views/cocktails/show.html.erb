@@ -1,6 +1,10 @@
-<h1>Your cocktail: <%= @cocktail.name %></h1> <%= @cocktail.vote_score %>
+
+<h1><%= @cocktail.name %></h1> <%= @cocktail.vote_score %>
 <%= link_to "Upvote", cocktail_votes_path(@cocktail), method: 'post' %>
+
 
 <p><%= @cocktail.description %></p>
 
 <p><%= @cocktail.instructions %></p>
+
+<p><%= cl_image_tag(@cocktail.image_id, :width => 50, :height => 50, :crop => :fill) %></p>

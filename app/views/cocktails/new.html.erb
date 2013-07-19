@@ -1,21 +1,25 @@
 <div class="new_cocktail_form">
   <%= form_for @cocktail do |f| %>
-    <%= f.label :name %>:
+    <%= f.label :cocktail_name %>:
     <%= f.text_field :name %>
     <br>
-    <%= f.label :description %>
+    <%= f.label :description %>:
     <%= f.text_field :description %>
     <br>
-    <%= f.label :instructions %>
-    <%= f.text_area :instructions %>
+    <%= f.label :instructions %>:
+    <%= f.text_area :instructions, cols: '20', rows: '5' %>
+    <br>
+    <%= f.label :photo %>:
+    <%= cloudinary_js_config %> 
+    <%= f.cl_image_upload(:image_id) %>
 
     <div class="ingredients_wrapper">
       <%= f.fields_for :ingredients do |builder| %>
         <%= render 'ingredient', f: builder %>
       <% end %>
     </div>
-
     <%= link_to_add_fields "Add Ingredient", f , :ingredients %>
+    <br>
     <%= f.submit %>
   <% end %>
 </div>

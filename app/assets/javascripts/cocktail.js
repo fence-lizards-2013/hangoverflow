@@ -12,4 +12,10 @@ var Cocktail = {
 
 $(document).ready(function(){
   Cocktail.init();
+
+  // I know this is ugly, just seeing if it works
+  // $('reveal-search').on('click', function() {
+  //   console.log("I'm in the reveal-search event");
+  //   $('.search').css('display', 'inherit');
+  // });
 });

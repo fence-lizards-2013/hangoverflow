@@ -1,5 +1,9 @@
-<h3>All of the alcohols!!</h3>
-
-<ul>
-	<%= render @cocktails %>
-</ul>
+<div id="home">
+  <div class="search">
+      <%= link_to 'search for cocktails' %> 
+      <%= render :partial => 'cocktails/search' %>
+  </div>
+  <div class="cocktail_grid">
+    <%= render @cocktails %>
+  </div>
+</div>

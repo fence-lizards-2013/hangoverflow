@@ -1,7 +1,7 @@
 class CocktailsController < ApplicationController
 
   def index 
-    @cocktails = Cocktail.all
+    @cocktails = Cocktail.where(ingredient_attributes: params)
   end
 
   def show
@@ -13,7 +13,13 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    @cocktail = current_user.cocktails.create params[:cocktail]
+    @cocktail = current_user.cocktails.build params[:cocktail]
+      if params[:cocktail][:image_id].present?
+        preloaded = Cloudinary::PreloadedFile.new(params[:cocktail][:image_id])         
+      raise "Invalid upload signature" if !preloaded.valid?
+        @cocktail.image_id = preloaded.identifier
+      end
+      @cocktail.save
     redirect_to @cocktail
   end
 
@@ -29,4 +35,15 @@ class CocktailsController < ApplicationController
     render :nothing => true
   end
 
+  def search
+    non_selected_ingredients = []
+    params[:parameters].each do |k, v|
+      non_selected_ingredients << k if v == 0
+    end
+    non_selected_ingredients.each
+    @cocktails = Ingredient.find_by_name()
+
+
+    
+  end
 end

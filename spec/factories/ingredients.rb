@@ -1,9 +1,10 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :ingredient, :class => 'Ingredients' do
-    name "MyString"
+  factory :ingredient do
+    name "Vodka"
     quantity 1
-    unitofmeasurement "MyString"
+    unit_of_measurement "oz"
+    cocktail
   end
 end

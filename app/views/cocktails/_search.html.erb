@@ -1,0 +1,9 @@
+<%= form_for :parameters, url: cocktails_search_path do |f|  %>
+
+  <% @ingredients.each do |ingredient| %>
+    <%= f.label :name, "#{ingredient.name.titleize}" %>
+    <%= f.check_box "#{ingredient.name}" %>
+  <% end %>
+
+  <%= f.submit "Search" %>
+<% end %>

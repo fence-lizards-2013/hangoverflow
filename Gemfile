@@ -4,6 +4,8 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'pg'
 gem 'simple_form'
+gem 'cloudinary'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -21,6 +23,7 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
+  gem 'shoulda'
 end
 
 group :production do

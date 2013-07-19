@@ -11,4 +11,5 @@ HangOverflow::Application.routes.draw do
   resources :ingredients, :only => [:new]
 
   match '/auth/:provider/callback', :to => 'authentications#create'
+  match '/cocktails/search', :to => 'cocktails#search', :as => 'cocktails_search'
 end
