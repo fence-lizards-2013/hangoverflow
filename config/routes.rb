@@ -5,7 +5,9 @@ HangOverflow::Application.routes.draw do
   root :to => "home#index"
   devise_for :users
   resources :users
-  resources :cocktails
+  resources :cocktails do
+  	resources :votes
+  end
   resources :ingredients, :only => [:new]
 
   match '/auth/:provider/callback', :to => 'authentications#create'
