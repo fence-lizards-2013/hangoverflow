@@ -1,7 +1,7 @@
 class CocktailsController < ApplicationController
 
   def index 
-    @cocktails = Cocktail.all
+    @cocktails = Cocktail.where(ingredient_attributes: params)
   end
 
   def show
@@ -29,4 +29,8 @@ class CocktailsController < ApplicationController
     render :nothing => true
   end
 
+  def search
+    User.find
+    render nothing: true
+  end
 end
