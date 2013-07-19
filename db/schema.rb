@@ -26,21 +26,19 @@ ActiveRecord::Schema.define(:version => 20130719041534) do
     t.string   "description"
     t.string   "instructions"
     t.integer  "user_id"
-    t.integer  "votes_id"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.integer  "vote_score",   :default => 0
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.integer  "vote_score"
     t.string   "image_id"
   end
 
   create_table "ingredients", :force => true do |t|
     t.string   "name"
     t.integer  "quantity"
-    t.string   "unitofmeasurement"
+    t.string   "unit_of_measurement"
     t.integer  "cocktail_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "users", :force => true do |t|
