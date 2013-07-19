@@ -1,5 +1,5 @@
-<h1>Your cocktail: <%= @cocktail.name %></h1>
-<%= link_to "Upvote", cocktail_votes_path(@cocktail) %>
+<h1>Your cocktail: <%= @cocktail.name %></h1> <%= @cocktail.vote_score %>
+<%= link_to "Upvote", cocktail_votes_path(@cocktail), method: 'post' %>
 
 <p><%= @cocktail.description %></p>
 
