@@ -2,8 +2,9 @@
 
 FactoryGirl.define do
   factory :cocktail do
-    name "MyString"
-    description "MyString"
-    instructions "MyString"
+    name "Vodka Martini"
+    description "Is Delicious"
+    instructions "Mix and Match"
+    user
   end
 end
