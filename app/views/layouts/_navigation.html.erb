@@ -2,12 +2,6 @@
 <nav>
   <%= link_to "Hangoverflow", root_path, :class => 'brand' %>
   <ul class="nav">
-    <li>
-     <%= link_to 'search for cocktails' %> 
-     <div id="search">
-      <%= render :partial => 'cocktails/search' %>
-    </div>
-    </li>
 
     <% if user_signed_in? %>
     <li>

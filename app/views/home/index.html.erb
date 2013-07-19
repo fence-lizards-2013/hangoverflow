@@ -1,6 +1,7 @@
 <div id="home">
   <div class="search">
-    PLACEHOLDER FOR SEARCH
+      <%= link_to 'search for cocktails' %> 
+      <%= render :partial => 'cocktails/search' %>
   </div>
   <div class="cocktail_grid">
     <%= render @cocktails %>
