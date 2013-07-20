@@ -9,12 +9,16 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
 */
+
+@import "config";
+@import "cocktail";
+@import "forms";
+@import "home";
 
 body {
   background-image: url('/img/background.jpg');
-
+  font-family: "Helvetica";
 }
 
 #image, #name {
@@ -72,4 +76,28 @@ ul.nav li {
   margin: 0 auto;
   padding: 15px;
   background-color: rgba(248,248,255,.5);
+}
+
+.button {
+  border-radius: 5px;
+  border: 1px solid #a64b00;
+  padding: 9px;
+  background: $main_color;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  margin: 9px 0;
+
+  &:hover {
+    background: #ff9640;
+  }
+}
+
+.button-large {
+  font-size: 16px;
+}
+
+.button-small {
+  font-size: 12px;
+  padding: 6px;
 }

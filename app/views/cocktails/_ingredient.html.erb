@@ -1,10 +1,11 @@
- <fieldset class='.ingredients'>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :quantity %>
-  <%= f.text_field :quantity %>
-  <%= f.label :unit_of_measurement %>
-  <%= f.select :unit_of_measurement, Ingredient::UNITS %>
+ <fieldset class='ingredient'>
+
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Ingredient name", class: "normal" %>
+    <%= f.text_field :quantity, placeholder: "Quantity", class: "small" %>
+    <%= f.select :unit_of_measurement, Ingredient::UNITS %>
+  </div>
+
   <%= f.hidden_field :_destroy %>
   <%= link_to 'Remove', '#', :class => 'remove-ingredient' %>
 </fieldset>

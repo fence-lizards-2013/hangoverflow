@@ -1,25 +1,39 @@
 <div class="new_cocktail_form">
   <%= form_for @cocktail do |f| %>
-    <%= f.label :cocktail_name %>:
-    <%= f.text_field :name %>
-    <br>
-    <%= f.label :description %>:
-    <%= f.text_field :description %>
-    <br>
-    <%= f.label :instructions %>:
-    <%= f.text_area :instructions, cols: '20', rows: '5' %>
-    <br>
-    <%= f.label :photo %>:
-    <%= cloudinary_js_config %> 
-    <%= f.cl_image_upload(:image_id) %>
+
+    <div class="field">
+      <%= f.label :cocktail_name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+
+    <div class="field">
+      <%= f.label :instructions %>
+      <%= f.text_area :instructions, cols: '20', rows: '5' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :photo %>
+      <%= cloudinary_js_config %> 
+      <%= f.cl_image_upload(:image_id) %>
+    </div>
 
     <div class="ingredients_wrapper">
       <%= f.fields_for :ingredients do |builder| %>
-        <%= render 'ingredient', f: builder %>
+      <%= render 'ingredient', f: builder %>
       <% end %>
     </div>
-    <%= link_to_add_fields "Add Ingredient", f , :ingredients %>
-    <br>
-    <%= f.submit %>
+
+    <div class="ingredients">
+      <h4>Cocktail Ingredients</h4>
+
+      <%= link_to_add_fields "Add Ingredient", f, :ingredients, class: "add_fields button button-small" %>
+    </div>
+
+    <%= f.submit "Create cocktail", class: "button button-large" %>
   <% end %>
 </div>

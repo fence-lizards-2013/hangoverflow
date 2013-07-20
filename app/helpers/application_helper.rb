@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def link_to_add_fields(name, f, association)
+  def link_to_add_fields(name, f, association, html_options={})
     # name = Add Ingredient, f references form builder var f, association :ingredients
     new_object = f.object.send(association).klass.new
     # f.object = @cocktail , send = f.object will 'send' (call) the assocition, so ingredients. summary = @cocktail.ingredients
@@ -11,7 +11,7 @@ module ApplicationHelper
       render(association.to_s.singularize, f: builder)
     #This will render a ingredient_fields, with the fields for f object
     end
-    link_to(name, '#', class: 'add_fields', data: {id: id, fields: fields.gsub("\n","")})
+    link_to(name, '#', {data: {id: id, fields: fields.gsub("\n","")}}.merge(html_options))
     #This will link to name (Add Ingredient) with the id and fields as part of the data attribute of the HTML anchor 
   end
 

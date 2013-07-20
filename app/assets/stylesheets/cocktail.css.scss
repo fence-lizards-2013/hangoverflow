@@ -1,0 +1,21 @@
+.new_cocktail_form {
+  width: 600px;
+  margin: 0 auto;
+
+  .ingredient {
+    border: 1px solid #444;
+    padding: 9px;
+    position: relative;
+    margin-bottom: 9px;
+  }
+
+  .remove-ingredient {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+  }
+}
+
+.ingredients {
+  padding: 18px;
+}
