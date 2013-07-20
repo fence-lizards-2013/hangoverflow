@@ -12,6 +12,7 @@
 */
 
 
+
 @import "config";
 @import "cocktail";
 @import "forms";
@@ -29,7 +30,12 @@ html {
 
 body {
 
+html {
+  background-image: url('/img/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
 }
+
 
 #image, #name {
   display: inline-block;
@@ -113,4 +119,5 @@ ul.nav li {
 .button-small {
   font-size: 12px;
   padding: 6px;
+
 }
