@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require cloudinary
 //= require_tree .
+
+$(document).ready(function(){
+  var $container = $('#cocktail_grid');
+// initialize
+  $container.masonry({
+    columnWidth: 200,
+    itemSelector: '.cocktail'
+  });
+});

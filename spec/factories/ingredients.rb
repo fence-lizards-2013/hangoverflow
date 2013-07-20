@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :ingredient do
-    name "Vodka"
-    quantity 1
-    unit_of_measurement "oz"
+    name { Faker::Address.city }
+    quantity 2
+    unit_of_measurement { ["Tablespoons", "ml", "oz"].sample }
     cocktail
   end
 end

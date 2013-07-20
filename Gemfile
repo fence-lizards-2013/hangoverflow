@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'pg'
 gem 'simple_form'
 gem 'cloudinary'
+gem 'faker'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

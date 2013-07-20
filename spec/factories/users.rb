@@ -5,7 +5,6 @@ FactoryGirl.define do
     name 'Test User'
     email 'example@example.com'
     password 'changeme'
-    password_confirmation 'changeme'
     overage true
   end
 
