@@ -10,7 +10,7 @@ class Cocktail < ActiveRecord::Base
 
   accepts_nested_attributes_for :ingredients, :reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true
 
-  before_save :save_image
+  before_create :save_image
 
   def update_vote_score!(value)
   	self.vote_score += value
