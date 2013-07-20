@@ -14,7 +14,7 @@
 
 user = FactoryGirl.create(:user)
 
-10.times do
+50.times do
   cocktail = FactoryGirl.create(:cocktail, user: user)
 
   2.times do 

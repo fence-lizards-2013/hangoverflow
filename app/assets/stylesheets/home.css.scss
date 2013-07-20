@@ -11,8 +11,12 @@
     display: none;
   }
 
-  .cocktail_grid {
-    position: relative;
-    margin: 0 auto;
+  #cocktail_grid {
+
+    .cocktail {
+      padding-bottom: 10px;
+      padding-right: 10px;
+    }
+    
   }
 }
