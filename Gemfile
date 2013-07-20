@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'pg'
 gem 'simple_form'
 gem 'cloudinary'
+gem 'faker'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -24,6 +25,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'shoulda'
+  gem 'debugger'
 end
 
 group :production do

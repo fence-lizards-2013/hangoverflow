@@ -12,8 +12,12 @@
 # puts 'user: ' << user.name
 
 
-Cocktail.create(user_id: '1', name: "Mojito", description: "Great drink if you have mint lying around.", instructions: "Muddle mint, add all ingredients, DONT SHAKE, stir.")
-Cocktail.create(user_id: '1', name: "Cape Fizz", description: "Kind of a girly drink.", instructions: "Put twice as much alcohol in and you won't even taste it..")
-# Cocktail.create(name: "Mojito", description: "Great drink if you have mint lying around.", instructions: "Muddle mint, add all ingredients, DONT SHAKE, stir.")
-# Cocktail.create(name: "Cape Fizz", description: "Kind of a girly drink.", instructions: "Put twice as much alcohol in and you won't even taste it..")
+user = FactoryGirl.create(:user)
 
+10.times do
+  cocktail = FactoryGirl.create(:cocktail, user: user)
+
+  2.times do 
+    FactoryGirl.create(:ingredient, cocktail: cocktail)
+  end
+end

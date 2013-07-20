@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :cocktail do
-    name "Vodka Martini"
-    description "Is Delicious"
-    instructions "Mix and Match"
+    name { Faker::Name.name }
+    description { Faker::Lorem.sentence }
+    instructions { Faker::Lorem.sentence }
     user
   end
 end

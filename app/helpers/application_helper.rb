@@ -18,6 +18,6 @@ module ApplicationHelper
   def gravatar_url(user_email)
     user_email.strip!
     user_email.downcase!
-    "http://www.gravatar.com/avatar/" + Digest::MD5.hexdigest(user_email)
+    "http://www.gravatar.com/avatar/" + Digest::MD5.hexdigest(user_email) + "?s=200"
   end
 end
