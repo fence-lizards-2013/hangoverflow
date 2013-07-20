@@ -2,7 +2,7 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :quantity %>
-  <%= f.text_field :quantity %>
+  <%= f.select :quantity, (1..20) %>
   <%= f.label :unit_of_measurement %>
   <%= f.select :unit_of_measurement, Ingredient::UNITS %>
   <%= f.hidden_field :_destroy %>

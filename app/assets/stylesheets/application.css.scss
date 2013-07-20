@@ -13,11 +13,12 @@
 */
 
 html {
-  background-color: rgba(113, 119, 121, 0.12);
+  background-image: url('/img/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 body {
-  background-image: url('/img/background.jpg');
 }
 
 #image, #name {
@@ -73,7 +74,9 @@ ul.nav li {
 
 .container {
   margin: 0 auto;
+  padding-left: 10px;
+  width: 1240px;
   position: relative;
-  width: 1200px;
-  background-color: rgba(248,248,255,.5);
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 4px;
 }
