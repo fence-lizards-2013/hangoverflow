@@ -21,6 +21,7 @@
 body {
   background-image: url('/img/background.jpg');
   font-family: "Helvetica";
+}
 
 html {
   background-image: url('/img/background.jpg');
@@ -28,14 +29,13 @@ html {
   background-size: cover;
 }
 
-body {
+
 
 html {
   background-image: url('/img/background.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
-
 
 #image, #name {
   display: inline-block;
