@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  <fieldset class='ingredient'>
 
   <div class="field">
@@ -7,15 +6,6 @@
     <%= f.select :unit_of_measurement, Ingredient::UNITS %>
   </div>
 
-=======
- <fieldset class='.ingredients'>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :quantity %>
-  <%= f.select :quantity, (1..20) %>
-  <%= f.label :unit_of_measurement %>
-  <%= f.select :unit_of_measurement, Ingredient::UNITS %>
->>>>>>> bfbab03ca53ad7343f32a4d3186632c694b89887
   <%= f.hidden_field :_destroy %>
   <%= link_to 'X', '#', class: 'remove-ingredient button button-small' %>
 </fieldset>
