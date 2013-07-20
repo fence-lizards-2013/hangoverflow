@@ -11,7 +11,7 @@
  *= require_self
 */
 
-<<<<<<< HEAD
+
 @import "config";
 @import "cocktail";
 @import "forms";
@@ -20,7 +20,7 @@
 body {
   background-image: url('/img/background.jpg');
   font-family: "Helvetica";
-=======
+
 html {
   background-image: url('/img/background.jpg');
   background-attachment: fixed;
@@ -28,7 +28,7 @@ html {
 }
 
 body {
->>>>>>> bfbab03ca53ad7343f32a4d3186632c694b89887
+
 }
 
 #image, #name {
