@@ -10,7 +10,9 @@
   <%= cloudinary_js_config %>
   <%= yield(:head) %>
 </head>
-<body class="<%= controller_name %> <%= action_name %>">
+
+
+<body class="<%= controller_name %>-<%= action_name %>">
   <header>
     <div class="nav_wrapper">
       <%= render 'layouts/navigation' %>
