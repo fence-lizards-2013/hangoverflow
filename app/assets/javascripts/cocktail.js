@@ -1,6 +1,11 @@
 var Cocktail = {
   init: function(){
     $('.delete_cocktail').on('ajax:success', this.deleteCocktail);
+    $('#toggle_search_button').on('click', this.toggleSearchForm);
+  },
+
+  toggleSearchForm: function() {
+    $('.search_form_wrapper').toggle('slide');
   },
 
   deleteCocktail: function(event, data) {
@@ -12,9 +17,4 @@ var Cocktail = {
 
 $(document).ready(function(){
   Cocktail.init();
-
-  $('#toggle_search_button').on('click', function() {
-    $('.search').toggle();
-  });
-
 });
