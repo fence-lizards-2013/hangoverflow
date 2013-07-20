@@ -12,7 +12,6 @@ class HomeController < ApplicationController
     Ingredient.all.each do |ingredient|
       ingredients << ingredient.name
     end
-
     ingredients.uniq
   end
 end
