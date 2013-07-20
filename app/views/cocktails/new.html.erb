@@ -1,13 +1,13 @@
 <div class="new_cocktail_form">
   <%= form_for @cocktail do |f| %>
     <%= f.label :cocktail_name %>:
-    <%= f.text_field :name %>
+    <%= f.text_field :name, value: "Some Cocktail" %>
     <br>
     <%= f.label :description %>:
-    <%= f.text_field :description %>
+    <%= f.text_field :description, value: "Some Description" %>
     <br>
     <%= f.label :instructions %>:
-    <%= f.text_area :instructions, cols: '20', rows: '5' %>
+    <%= f.text_area :instructions, cols: '20', rows: '5', value: "Some Instructions" %>
     <br>
     <%= f.label :photo %>:
     <%= cloudinary_js_config %> 
