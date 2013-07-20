@@ -19,7 +19,7 @@ $(document).ready(function(){
   var $container = $('#cocktail_grid');
 // initialize
   $container.masonry({
-    columnWidth: 200,
+    columnWidth: 10,
     itemSelector: '.cocktail'
   });
 });

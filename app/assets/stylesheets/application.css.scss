@@ -11,6 +11,7 @@
  *= require_self
 */
 
+<<<<<<< HEAD
 @import "config";
 @import "cocktail";
 @import "forms";
@@ -19,6 +20,15 @@
 body {
   background-image: url('/img/background.jpg');
   font-family: "Helvetica";
+=======
+html {
+  background-image: url('/img/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+>>>>>>> bfbab03ca53ad7343f32a4d3186632c694b89887
 }
 
 #image, #name {
@@ -71,11 +81,14 @@ ul.nav li {
   display: inline-block;
   width: 100%;
 }
+
 .container {
-  width: 960px;
   margin: 0 auto;
-  padding: 15px;
-  background-color: rgba(248,248,255,.5);
+  padding-left: 10px;
+  width: 1240px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 4px;
 }
 
 .button {

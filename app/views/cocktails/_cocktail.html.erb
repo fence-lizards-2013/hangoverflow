@@ -1,3 +1,6 @@
-<div class="cocktail">
-  <%= cl_image_tag("http://upload.wikimedia.org/wikipedia/commons/e/e7/Flaming_cocktails.jpg",  :width => rand(500) + 100, :height => rand(250) + 100)  %>
-</div>
+<% size = [[300,300]].sample %>
+
+<%= link_to cocktail_path(cocktail) do %>
+<%= cl_image_tag("v1374276395/tiyzyrvzci0ynowcgafo.jpg",width: size[0], height: size[1], :crop => :fill, class: "cocktail") %>
+
+<% end %>

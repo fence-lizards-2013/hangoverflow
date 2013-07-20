@@ -10,9 +10,13 @@
   <%= cloudinary_js_config %>
   <%= yield(:head) %>
 </head>
+
 <body class="<%= controller_name %>-<%= action_name %>">
 
 
+
+
+<body class="<%= controller_name %> <%= action_name %>">
 
   <header>
     <div class="nav_wrapper">
@@ -21,13 +25,11 @@
     <%= render 'layouts/messages' %>
   </header>
   <div id="main" role="main">
-    <div id="container" class="container">
+    <div class="container">
       <%= yield %>
     </div>
   </div>
   <footer>
   </footer>
-
-
 </body>
 </html>
