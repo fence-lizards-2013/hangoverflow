@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20130719220019) do
     t.string   "description"
     t.string   "instructions"
     t.integer  "user_id"
+    t.integer  "votes_id"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
     t.integer  "vote_score",   :default => 0

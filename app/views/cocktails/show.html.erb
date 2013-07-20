@@ -1,10 +1,14 @@
 
-<h1><%= @cocktail.name %></h1> <%= @cocktail.vote_score %>
-<%= link_to "Upvote", cocktail_votes_path(@cocktail), method: 'post' %>
+<div>
+	<div id="image"><p><%= cl_image_tag(@cocktail.image_id, :width => 50, :height => 50, :crop => :fill) %></p></div>
 
+	<div id="name"><h1><%= @cocktail.name %></h1> </div>
+</div>
 
-<p><%= @cocktail.description %></p>
+<div><%= @cocktail.vote_score %> <%= link_to "Upvote", cocktail_votes_path(@cocktail), method: 'post' %></div>
 
-<p><%= @cocktail.instructions %></p>
+<div class = "description">
+	<div id="description"><p><%= @cocktail.description %></p></div>
 
-<p><%= cl_image_tag(@cocktail.image_id, :width => 50, :height => 50, :crop => :fill) %></p>
+	<div id="instructions"><p><%= @cocktail.instructions %></p></div>
+</div>
