@@ -1,6 +1,7 @@
+# REVIEW: unimplemented code is evil!
 class VotesController < ApplicationController
 
-  def index 
+  def index
   end
 
   def show

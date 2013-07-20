@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
   has_many :authentications, :dependent => :destroy
 
   def update_reputation!
+    # REVIEW: remember inject?
     reputation = 0
     cocktails.each do |cocktail|
       reputation += cocktail.vote_score if cocktail.vote_score
@@ -25,6 +26,7 @@ class User < ActiveRecord::Base
     self.errors[:overage] = "You Must be 21 and over to progress" unless self.overage
   end
 
+  # REVIEW: i don't get that method.
   def self.create_from_hash(hash)
     user = User.create(name: hash.info.name,
                        email: hash.info.email,

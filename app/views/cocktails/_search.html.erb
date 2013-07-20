@@ -1,6 +1,7 @@
 <%= form_for :parameters, url: cocktails_search_path do |f|  %>
 
   <% @ingredients.each do |ingredient| %>
+    <!-- ingredient.titleize and ingredient is already a string, why wrap it "#{}" -->
     <%= f.label :name, "#{ingredient.titleize}" %>
     <%= f.check_box "#{ingredient}" %>
   <% end %>

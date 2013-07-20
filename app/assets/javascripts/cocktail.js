@@ -1,3 +1,4 @@
+// REVIEW: nice!
 var Cocktail = {
   init: function(){
     $('.delete_cocktail').on('ajax:success', this.deleteCocktail);

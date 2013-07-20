@@ -2,6 +2,7 @@
 
 <ul>
   <% @cocktails.each do |cocktail| %>
+    <!-- cocktail.name and ingredient is already a string, why wrap it "#{}" -->
     <li><%= link_to "#{cocktail.name}", cocktail_path(cocktail) %></li>
   <% end %>
 </ul>

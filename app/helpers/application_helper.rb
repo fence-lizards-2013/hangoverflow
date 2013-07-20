@@ -12,9 +12,10 @@ module ApplicationHelper
     #This will render a ingredient_fields, with the fields for f object
     end
     link_to(name, '#', class: 'add_fields', data: {id: id, fields: fields.gsub("\n","")})
-    #This will link to name (Add Ingredient) with the id and fields as part of the data attribute of the HTML anchor 
+    #This will link to name (Add Ingredient) with the id and fields as part of the data attribute of the HTML anchor
   end
 
+  # REVIEW: I would move this the use model, I should be able to do user.avatar
   def gravatar_url(user_email)
     user_email.strip!
     user_email.downcase!

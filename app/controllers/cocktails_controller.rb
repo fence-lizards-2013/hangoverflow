@@ -1,6 +1,6 @@
 class CocktailsController < ApplicationController
 
-  def index 
+  def index
     @cocktails = Cocktail.all
   end
 
@@ -34,6 +34,9 @@ class CocktailsController < ApplicationController
   end
 
   def search
+    # REVIEW: I would move all of these methods and method calls to the
+    # Cocktail model. I should be able to do Cocktail.search params and it returns
+    # the right thing. There is too much logic in this controller.
     p "*" * 50
     selected_ingredient_names = parse_search_form_input(params)
     p selected_ingredient_names

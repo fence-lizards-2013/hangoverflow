@@ -6,7 +6,8 @@ class HomeController < ApplicationController
   end
 
   private
-  
+  # REVIEW: this doesn't belong here, it belongs to the Ingredient model.
+  # also, remember inject?
   def unique_ingredient_names
     ingredients = []
     Ingredient.all.each do |ingredient|

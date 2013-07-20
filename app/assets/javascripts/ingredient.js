@@ -1,5 +1,6 @@
+// REVIEW: looking good!
 $(document).ready(function(){
-  $('form').on('click', '.add_fields', Ingredient.addIngredient); 
+  $('form').on('click', '.add_fields', Ingredient.addIngredient);
   $('form').on('click', '.remove-ingredient',Ingredient.removeFields);
 });
 
