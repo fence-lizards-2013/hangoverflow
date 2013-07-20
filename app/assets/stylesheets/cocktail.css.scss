@@ -3,19 +3,31 @@
   margin: 0 auto;
 
   .ingredient {
-    border: 1px solid #444;
-    padding: 9px;
+    border: none;
+    padding: 0px;
     position: relative;
     margin-bottom: 9px;
+
+    .field {
+      padding: 0;
+    }
   }
 
   .remove-ingredient {
     position: absolute;
-    top: 9px;
+    top: -5px;
     right: 9px;
   }
 }
 
 .ingredients {
   padding: 18px;
+}
+
+.cocktails-new {
+
+  .container {
+    width: 700px;
+    border-radius: 8px;
+  }
 }
