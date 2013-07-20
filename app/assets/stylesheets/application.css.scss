@@ -18,17 +18,13 @@
 @import "forms";
 @import "home";
 
+html {
+  // background: url("/img/background.jpg") no-repeat fixed;
+  background-size: cover;
+}
+
 body {
   font-family: "Helvetica";
-}
-
-html {
-  background-attachment: fixed;
-}
-
-html {
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 #image, #name {
@@ -85,9 +81,7 @@ ul.nav li {
 .container {
   margin: 0 auto;
   padding-left: 10px;
-  width: 1240px;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.45);
   border-radius: 4px;
 }
 

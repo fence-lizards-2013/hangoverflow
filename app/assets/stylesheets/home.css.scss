@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #home {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(7, 9, 12, 0.5);
 
   .search_form_wrapper {
     position: relative;
@@ -14,8 +17,12 @@
   #cocktail_grid {
 
     .cocktail {
-      padding-bottom: 10px;
-      padding-right: 10px;
+      margin: 10px;
+      border-radius: 5px;
+
+      img  {
+        border-radius: 5px;
+      }
     }
     
   }
