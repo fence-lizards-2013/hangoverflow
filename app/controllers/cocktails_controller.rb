@@ -24,10 +24,16 @@ class CocktailsController < ApplicationController
   end
 
   def edit
-    @cocktail.find(params[:id])
+    @cocktail = Cocktail.find(params[:id])
   end
 
   def update
+    @cocktail = Cocktail.find(params[:id])
+    if @cocktail.update_attributes(params[:cocktail])
+      redirect_to @cocktail
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -36,17 +42,11 @@ class CocktailsController < ApplicationController
   end
 
   def search
-    p "*" * 50
     selected_ingredient_names = parse_search_form_input(params)
-    p selected_ingredient_names
 
     selected_ingredients = find_ingredient_obj_by_name(selected_ingredient_names)
-    p "*" * 50
-    p selected_ingredients
 
     cocktail_id_numbers = find_cocktail_ids_by_ingredients(selected_ingredients)
-    p "*" * 50
-    p cocktail_id_numbers
 
     @cocktails = Cocktail.find(cocktail_id_numbers)
     @ingredients = Ingredient.unique_ingredient_names.sort

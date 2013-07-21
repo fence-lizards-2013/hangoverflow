@@ -9,27 +9,45 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
 */
 
+@import "normalize";
 @import "config";
+@import url(http://fonts.googleapis.com/css?family=Nixie+One);
+@import "cocktail";
+@import "forms";
+@import "home";
+@import "user";
 
 html {
-  // background: url("/img/background.jpg") no-repeat fixed;
-  background-size: cover;
+  /*// background: url("/img/background.jpg") no-repeat fixed;
+  background-size: cover;*/
+}
+
+header, h1, h2 {
+  font-family: "oriya mn", helvetica;
+}
+
+form {
+  color: $plum_color;
 }
 
 body {
-  font-family: "Helvetica";
-  background-color: #EEEFF0;
+  font-family: "Nixie One", helvetica;
+  color: white;
+  background-image: url("/img/backgroundchalk.jpg");
+  background-size: cover;
 }
 
-.brand {
+a.brand {
   float: left;
-  padding-right: 8px;
 }
 
-ul.nav {
+.brand img{
+  height: 35px;
+}
+
+/*ul.nav {
   list-style: none;
   margin: 0 0 2em;
   padding: 0;
@@ -37,7 +55,7 @@ ul.nav {
 
 ul.nav li {
   display: inline;
-}
+}*/
 
 #flash_notice, #flash_alert {
   padding: 5px 8px;
@@ -59,16 +77,17 @@ ul.nav li {
 
 .button {
   border-radius: 5px;
-  border: 1px solid #a64b00;
   padding: 9px;
-  background: $main_color;
-  color: #ffffff;
+  background: $plum_color;
+  border: 1px solid darken($plum_color, 10%);
+  color: $off_white;
   text-decoration: none;
   display: inline-block;
   margin: 9px 0;
 
   &:hover {
-    background: #ff9640;
+    background: lighten($plum_color, 6%);
+    border: 1px solid lighten($plum_color, 2%);
   }
 }
 
@@ -80,4 +99,9 @@ ul.nav li {
   font-size: 12px;
   padding: 6px;
 
+}
+
+a{
+  text-decoration: none;
+  color: #444;
 }

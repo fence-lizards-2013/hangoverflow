@@ -1,29 +1,43 @@
-// .field {
-//   padding: 9px;
+@import "config";
 
-//   label {
-//     display: block;
-//     font-size: 16px;
-//     color:#444;
-//   }
-// }
+.field {
+  margin-bottom: 20px;
 
-// input[type=text], input[type=email], textarea {
-//   font-size: 14px;
-//   padding: 9px;
-//   border-radius: 3px;
-//   border: 1px solid #eee;
-//   width: 100%;
+  label {
+    display: block;
+    font-size: 20px;
+    padding-bottom:20px;
+    color: $plum_color;
+  }
+}
 
-//   &.small {
-//     width: 80px;
-//   }
+input[type=text], input[type=email], textarea, input[type='password'] {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  width: 95%;
+  background-color: $input_text;
+  color: $input_font;
 
-//   &.normal {
-//     width: 200px;
-//   }
-// }
+  &.small {
+    width: 80px;
+  }
 
-// input[type=submit] {
+  &.normal {
+    width: 200px;
+  }
+}
 
-// }
+.centered  {
+  padding: 20px;
+  margin:3em auto;
+  border:1px solid #E3E4E5;
+  width:500px;
+  border-radius: 8px;
+  background-color: $form_color;
+
+  h2{
+    color: $plum_color;
+  }
+}

@@ -1,6 +1,4 @@
 .new_cocktail_form {
-  width: 600px;
-  margin: 0 auto;
 
   .ingredient {
     border: none;
@@ -15,13 +13,14 @@
 
   .remove-ingredient {
     position: absolute;
-    top: -5px;
+    top: -7px;
     right: 9px;
+    padding: 10px;
   }
 }
 
 .ingredients {
-  padding: 18px;
+  padding: 20px 0;
 }
 
 .cocktails-new {
@@ -36,7 +35,7 @@
 /*css for cocktail display page here:*/
 
   .cocktail_description {
-    background-color: rgba(70, 70, 70, 0.6);
+    background-color: rgba(40, 40, 40, 0.6);
     width: 20%;
     min-width: 10em;
     padding: 1em;
