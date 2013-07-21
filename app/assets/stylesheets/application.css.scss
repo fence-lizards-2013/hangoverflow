@@ -9,14 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require_tree .
 */
 
-
-
 @import "config";
-@import "cocktail";
-@import "forms";
-@import "home";
 
 html {
   // background: url("/img/background.jpg") no-repeat fixed;
@@ -59,10 +55,6 @@ ul.nav li {
 }
 
 .container {
-  margin: 0 auto;
-  padding-left: 10px;
-  position: relative;
-  border-radius: 4px;
 }
 
 .button {
