@@ -1,4 +1,5 @@
 <div class="cocktail_description">
+
 	<div id="description_content">
 		<h1><%= @cocktail.name %></h1> 
 		<%= @cocktail.vote_score %> <%= link_to "Upvote", cocktail_votes_path(@cocktail), method: 'post' %>
@@ -12,5 +13,11 @@
 		<p><%= @cocktail.instructions %></p>
 	</div>		
 </div>
-<div class="display-image"><%= cl_image_tag(@cocktail.image_id) %>
-</div>
+
+<style>
+html body {
+	background-image: url("http://res.cloudinary.com/dl55dq59l/image/upload/<%= @cocktail.image_id %>");
+	background-size: cover;
+	background-repeat: no-repeat; 
+}
+</style>
