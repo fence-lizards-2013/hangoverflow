@@ -9,11 +9,15 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
 */
 
+@import "normalize";
 @import "config";
 @import url(http://fonts.googleapis.com/css?family=Nixie+One);
+@import "cocktail";
+@import "forms";
+@import "home";
+@import "user";
 
 html {
   /*// background: url("/img/background.jpg") no-repeat fixed;
@@ -69,16 +73,17 @@ ul.nav li {
 
 .button {
   border-radius: 5px;
-  border: 1px solid #a64b00;
   padding: 9px;
-  background: $main_color;
-  color: #ffffff;
+  background: $plum_color;
+  border: 1px solid darken($plum_color, 10%);
+  color: $off_white;
   text-decoration: none;
   display: inline-block;
   margin: 9px 0;
 
   &:hover {
-    background: #ff9640;
+    background: lighten($plum_color, 6%);
+    border: 1px solid lighten($plum_color, 2%);
   }
 }
 
@@ -90,4 +95,9 @@ ul.nav li {
   font-size: 12px;
   padding: 6px;
 
+}
+
+a{
+  text-decoration: none;
+  color: #444;
 }
