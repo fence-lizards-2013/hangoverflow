@@ -38,6 +38,10 @@ input[type=text], input[type=email], textarea, input[type='password'] {
     padding: 16px;
     margin-left: 24px;
   }
+
+  input[type=submit]{
+    margin-left:16px;
+  }
 }
 
 .centered {

@@ -22,10 +22,16 @@ class CocktailsController < ApplicationController
   end
 
   def edit
-    @cocktail.find(params[:id])
+    @cocktail = Cocktail.find(params[:id])
   end
 
   def update
+    @cocktail = Cocktail.find(params[:id])
+    if @cocktail.update_attributes(params[:cocktail])
+      redirect_to @cocktail
+    else
+      render :edit
+    end
   end
 
   def destroy

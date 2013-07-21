@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica";
+  font-family:'Helvetica Neue',sans-serif;
   background-color: #EEEFF0;
 }
 
@@ -75,7 +75,7 @@ ul.nav li {
   margin: 9px 0;
 
   &:hover {
-    background: $gray_color ;
+    background: $gray_color;
   }
 }
 
