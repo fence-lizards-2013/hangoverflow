@@ -1,6 +1,6 @@
 <div id="overlay">
   <div id="modal">
-    <%= form_for :parameters, url: cocktails_search_path do |f|  %>
+    <%= form_for :parameters, url: cocktails_search_path, remote: true do |f|  %>
       <div class="ingredients_wrapper">
         <h2>Pick Some Ingredients</h2>
         <% @ingredients.each_with_index do |ingredient, index| %>

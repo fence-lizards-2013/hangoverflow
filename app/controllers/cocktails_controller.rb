@@ -3,7 +3,6 @@ class CocktailsController < ApplicationController
   def index 
     @cocktails = Cocktail.all
     @ingredients = @ingredients = Ingredient.unique_ingredient_names.sort
-    p @cocktails
     render :json => render_to_string(@cocktails).to_json
   end
 
@@ -52,7 +51,7 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.find(cocktail_id_numbers)
     @ingredients = Ingredient.unique_ingredient_names.sort
 
-    render "home/index"
+    render :json => render_to_string(@cocktails).to_json
   end
 
   private

@@ -8,8 +8,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @cocktails = @user.cocktails
-
-    p @cocktails
   end
 
 end
