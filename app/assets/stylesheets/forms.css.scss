@@ -8,12 +8,12 @@
   }
 }
 
-input[type=text], input[type=email], textarea {
+input[type=text], input[type=email], textarea, input[type='password'] {
   font-size: 14px;
   padding: 9px;
   border-radius: 3px;
   border: 1px solid #eee;
-  width: 100%;
+  width: 85%;
 
   &.small {
     width: 80px;
@@ -24,6 +24,18 @@ input[type=text], input[type=email], textarea {
   }
 }
 
-input[type=submit] {
+.sign_up, .new_cocktail_form, .sign_in  {
+  border:1px solid #E3E4E5;
+  width:550px;
+  border-radius: 8px;
+  background-color: #252525;
 
+  h2{
+
+  }
+}
+
+.centered {
+  width: 600px;
+  margin: 0 auto;
 }
