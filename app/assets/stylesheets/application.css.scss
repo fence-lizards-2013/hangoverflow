@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica";
+  font-family:'Helvetica Neue',sans-serif;
   background-color: #EEEFF0;
 }
 
@@ -59,16 +59,15 @@ ul.nav li {
 
 .button {
   border-radius: 5px;
-  border: 1px solid #a64b00;
   padding: 9px;
-  background: $main_color;
-  color: #ffffff;
+  background: $plum_color;
+  color: $off_white;
   text-decoration: none;
   display: inline-block;
   margin: 9px 0;
 
   &:hover {
-    background: #ff9640;
+    background: $gray_color;
   }
 }
 

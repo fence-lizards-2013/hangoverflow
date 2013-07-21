@@ -1,6 +1,4 @@
 .new_cocktail_form {
-  width: 600px;
-  margin: 0 auto;
 
   .ingredient {
     border: none;
@@ -15,8 +13,9 @@
 
   .remove-ingredient {
     position: absolute;
-    top: -5px;
+    top: -7px;
     right: 9px;
+    padding: 10px;
   }
 }
 
