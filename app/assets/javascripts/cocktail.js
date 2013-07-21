@@ -15,6 +15,7 @@ var Cocktail = {
   }
 }
 
+
 $(document).ready(function(){
   Cocktail.init();
 });

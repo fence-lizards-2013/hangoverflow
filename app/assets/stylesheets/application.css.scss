@@ -27,22 +27,6 @@ body {
   font-family: "Helvetica";
 }
 
-#image, #name {
-  display: inline-block;
-}
-
-#name {
-  margin-left: 20px;
-}
-
-#description {
-  float: left;
-}
-
-#instructions {
-  float: right;
-}
-
 .brand {
   float: left;
   padding-right: 8px;
@@ -71,11 +55,6 @@ ul.nav li {
 #flash_alert {
   background-color: #FCC;
   border: solid 1px #C66;
-}
-
-.description{
-  display: inline-block;
-  width: 100%;
 }
 
 .container {

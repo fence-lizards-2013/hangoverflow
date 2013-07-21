@@ -1,14 +1,16 @@
+<div class="cocktail_description">
+	<div id="description_content">
+		<h1><%= @cocktail.name %></h1> 
+		<%= @cocktail.vote_score %> <%= link_to "Upvote", cocktail_votes_path(@cocktail), method: 'post' %>
+		<p><%= @cocktail.description %></p>
+		<ul>
+			<% @cocktail.ingredients.each do |ingredient| %>
+			<li><%=  ingredient.quantity %> <%= ingredient.unit_of_measurement %> <%= ingredient.name %></li>
+			<% end %>
+		</ul>
 
-<div>
-	<div id="image"><p><%= cl_image_tag(@cocktail.image_id, :width => 50, :height => 50, :crop => :fill) %></p></div>
-
-	<div id="name"><h1><%= @cocktail.name %></h1> </div>
+		<p><%= @cocktail.instructions %></p>
+	</div>		
 </div>
-
-<div><%= @cocktail.vote_score %> <%= link_to "Upvote", cocktail_votes_path(@cocktail), method: 'post' %></div>
-
-<div class = "description">
-	<div id="description"><p><%= @cocktail.description %></p></div>
-
-	<div id="instructions"><p><%= @cocktail.instructions %></p></div>
+<div class="display-image"><%= cl_image_tag(@cocktail.image_id) %>
 </div>
