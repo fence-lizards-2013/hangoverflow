@@ -47,7 +47,9 @@ class CocktailsController < ApplicationController
     p cocktail_id_numbers
 
     @cocktails = Cocktail.find(cocktail_id_numbers)
-    @ingredients = Ingredient.unique_ingredient_names
+    @ingredients = Ingredient.unique_ingredient_names.sort
+
+    render "home/index"
   end
 
   private

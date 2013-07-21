@@ -1,13 +1,20 @@
 <div id="overlay">
   <div id="modal">
-    <i id="close" class="icon-remove icon-2x"></i>
     <%= form_for :parameters, url: cocktails_search_path do |f|  %>
-      <% @ingredients.each do |ingredient| %>
-      asdasdasd
-        <%= f.label :name, "#{ingredient.titleize}" %>
-        <%= f.check_box "#{ingredient}" %>
-      <% end %>
+      <div class="ingredients_wrapper">
+        <h2>Pick Some Ingredients</h2>
+        <% @ingredients.each_with_index do |ingredient, index| %>
+
+          <%= "<br></br>".html_safe if index%3 == 0 %>
+          <div class="ingredient">
+            <%= f.check_box "#{ingredient}" %>
+            <%= f.label :name, "#{ingredient.titleize}" %>
+          </div>
+        <% end %>
+
+      </div>
       <%= f.submit "Search" %>
+      <%= link_to "Close" , "#", id: "close" %>
     <% end %>
   </div>
 </div>
