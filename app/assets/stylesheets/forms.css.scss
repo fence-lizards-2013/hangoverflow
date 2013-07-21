@@ -1,9 +1,9 @@
 .field {
-  padding: 30px;
+  margin-bottom: 20px;
 
   label {
     display: block;
-    font-size: 24px;
+    font-size: 20px;
     padding-bottom:20px;
     color: $plum_color;
   }
@@ -27,24 +27,15 @@ input[type=text], input[type=email], textarea, input[type='password'] {
   }
 }
 
-.sign_up, .new_cocktail_form, .sign_in  {
+.centered  {
+  padding: 20px;
+  margin:3em auto;
   border:1px solid #E3E4E5;
-  width:550px;
+  width:500px;
   border-radius: 8px;
   background-color: $form_color;
 
   h2{
     color: $plum_color;
-    padding: 16px;
-    margin-left: 24px;
   }
-
-  input[type=submit]{
-    margin-left:16px;
-  }
-}
-
-.centered {
-  width: 600px;
-  margin: 0 auto;
 }

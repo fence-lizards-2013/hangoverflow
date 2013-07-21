@@ -65,13 +65,15 @@ ul.nav li {
   border-radius: 5px;
   padding: 9px;
   background: $plum_color;
+  border: 1px solid darken($plum_color, 10%);
   color: $off_white;
   text-decoration: none;
   display: inline-block;
   margin: 9px 0;
 
   &:hover {
-    background: $gray_color;
+    background: lighten($plum_color, 6%);
+    border: 1px solid lighten($plum_color, 2%);
   }
 }
 
