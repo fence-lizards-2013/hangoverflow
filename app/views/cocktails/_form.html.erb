@@ -1,17 +1,17 @@
 <%= form_for @cocktail do |f| %>
   <div class="field">
-    <%= f.label :cocktail_name %>
-    <%= f.text_field :name, value: "A" %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
   </div>
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_field :description, value: "A" %>
+    <%= f.text_field :description %>
   </div>
 
   <div class="field">
     <%= f.label :instructions %>
-    <%= f.text_area :instructions, cols: '20', rows: '5', value: "A" %>
+    <%= f.text_area :instructions, cols: '20', rows: '5' %>
   </div>
 
   <div class="field">
