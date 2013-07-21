@@ -1,19 +1,22 @@
 .field {
-  padding: 9px;
+  padding: 30px;
 
   label {
     display: block;
-    font-size: 16px;
-    color:#444;
+    font-size: 24px;
+    padding-bottom:20px;
+    color: $plum_color;
   }
 }
 
 input[type=text], input[type=email], textarea, input[type='password'] {
-  font-size: 14px;
-  padding: 9px;
+  font-size: 16px;
+  padding: 10px;
   border-radius: 3px;
   border: 1px solid #eee;
-  width: 85%;
+  width: 95%;
+  background-color: $input_text;
+  color: $input_font;
 
   &.small {
     width: 80px;
@@ -28,10 +31,12 @@ input[type=text], input[type=email], textarea, input[type='password'] {
   border:1px solid #E3E4E5;
   width:550px;
   border-radius: 8px;
-  background-color: #252525;
+  background-color: $form_color;
 
   h2{
-
+    color: $plum_color;
+    padding: 16px;
+    margin-left: 24px;
   }
 }
 
