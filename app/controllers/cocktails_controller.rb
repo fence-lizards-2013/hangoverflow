@@ -2,6 +2,9 @@ class CocktailsController < ApplicationController
 
   def index 
     @cocktails = Cocktail.all
+    @ingredients = @ingredients = Ingredient.unique_ingredient_names.sort
+    p @cocktails
+    render :json => render_to_string(@cocktails).to_json
   end
 
   def show
