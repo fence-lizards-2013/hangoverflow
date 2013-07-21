@@ -18,14 +18,14 @@ input[type=text], input[type=email], textarea, input[type='password'] {
   background-color: $input_text;
   color: $input_font;
 
-//   &.small {
-//     width: 80px;
-//   }
+  &.small {
+    width: 80px;
+  }
 
-//   &.normal {
-//     width: 200px;
-//   }
-// }
+  &.normal {
+    width: 200px;
+  }
+}
 
 .sign_up, .new_cocktail_form, .sign_in  {
   border:1px solid #E3E4E5;
