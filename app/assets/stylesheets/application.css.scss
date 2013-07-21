@@ -13,23 +13,33 @@
 */
 
 @import "config";
+@import url(http://fonts.googleapis.com/css?family=Nixie+One);
 
 html {
-  // background: url("/img/background.jpg") no-repeat fixed;
-  background-size: cover;
+  /*// background: url("/img/background.jpg") no-repeat fixed;
+  background-size: cover;*/
+}
+
+header, h1, h2 {
+  font-family: "oriya mn", helvetica;
 }
 
 body {
-  font-family: "Helvetica";
-  background-color: #EEEFF0;
+  font-family: "Nixie One", helvetica;
+  color: white;
+  background-image: url("/img/backgroundchalk.jpg");
+  background-size: cover;
 }
 
-.brand {
+a.brand {
   float: left;
-  padding-right: 8px;
 }
 
-ul.nav {
+.brand img{
+  height: 35px;
+}
+
+/*ul.nav {
   list-style: none;
   margin: 0 0 2em;
   padding: 0;
@@ -37,7 +47,7 @@ ul.nav {
 
 ul.nav li {
   display: inline;
-}
+}*/
 
 #flash_notice, #flash_alert {
   padding: 5px 8px;
