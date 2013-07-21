@@ -11,4 +11,3 @@ desc "Pick a random user as the winner"
 task :reset => :environment do
   exec "rake db:drop && rake db:create && rake db:migrate && rake db:test:prepare"
 end
-

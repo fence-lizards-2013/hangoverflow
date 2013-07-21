@@ -1,0 +1,13 @@
+<div id="overlay">
+  <div id="modal">
+    <i id="close" class="icon-remove icon-2x"></i>
+    <%= form_for :parameters, url: cocktails_search_path do |f|  %>
+      <% @ingredients.each do |ingredient| %>
+      asdasdasd
+        <%= f.label :name, "#{ingredient.titleize}" %>
+        <%= f.check_box "#{ingredient}" %>
+      <% end %>
+      <%= f.submit "Search" %>
+    <% end %>
+  </div>
+</div>

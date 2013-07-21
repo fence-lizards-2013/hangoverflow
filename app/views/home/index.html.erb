@@ -1,8 +1,10 @@
 
 <div id="home">
-  <button id="toggle_search_button">Search by Ingredient</button> 
+  <div id="search_button_container">
+    <button id="search_button">Search by Ingredient</button> 
+  </div>
   <div class="search_form_wrapper">
-      <%= render :partial => 'cocktails/search' %>
+      <%= render :partial => 'cocktails/form_search' %>
   </div>
   <div id="cocktail_grid">
     <%= render @cocktails %>
