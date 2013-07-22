@@ -2,13 +2,6 @@
 
 .field {
   margin-bottom: 20px;
-
-  label {
-    display: block;
-    font-size: 20px;
-    padding-bottom:20px;
-    color: $plum_color;
-  }
 }
 
 input[type=text], input[type=email], textarea, input[type='password'] {
@@ -37,7 +30,14 @@ input[type=text], input[type=email], textarea, input[type='password'] {
   border-radius: 8px;
   background-color: $form_color;
 
-  h2{
+  h2, h3, p{
     color: $plum_color;
   }
+}
+
+label, span {
+    display: block;
+    font-size: 20px;
+    padding-bottom:20px;
+    color: $plum_color;
 }

@@ -3,8 +3,18 @@ var Cocktail = {
     $('.delete_cocktail').on('ajax:success', this.deleteCocktail);
     $('#search_button').on('click', this.openSearchForm);
     $('#modal form').on('ajax:success', this.renderCocktails);
-
+    this.bindHover();
     this.getCocktails();
+  },
+
+  bindHover: function() {
+    $('#cocktail_grid').on('mouseenter','.cocktail',function(){
+      $(this).find('.name, .votes').toggle('slide');
+    });
+
+    $('#cocktail_grid').on('mouseleave','.cocktail',function(){
+      $(this).find('.name, .votes').toggle('slide');
+    });
   },
 
   renderCocktails: function(event, response) {
