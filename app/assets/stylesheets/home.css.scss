@@ -249,6 +249,14 @@
 
 #cocktail_grid {
 
+  .gigante {
+      img {
+        height: 500px;
+        width: 500px;
+    
+      }
+        }
+
 
   .cocktail {
     margin: 10px;
@@ -256,13 +264,13 @@
     display: inline-block;
     font-family: 'Allan', cursive;
 
-
     img  {
       border-radius: 5px;
     }
 
     .name {
       color: rgba(255,255,255,0.8);
+      cursor: pointer;
       letter-spacing: 2px;
       width: 95%;
       position: absolute;

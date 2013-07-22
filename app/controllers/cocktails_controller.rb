@@ -1,7 +1,7 @@
 class CocktailsController < ApplicationController
 
   def index 
-    @cocktails = Cocktail.all
+    @cocktails = Cocktail.all.sample(30)
     @ingredients = @ingredients = Ingredient.unique_ingredient_names.sort
     render :json => render_to_string(@cocktails).to_json
   end

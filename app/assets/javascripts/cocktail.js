@@ -90,7 +90,31 @@ var Grid = {
       itemSelector: '.cocktail',
       isFitWidth: true
     });
-    Cocktail.mason = Cocktail.container.data('masonry')
+    Cocktail.mason = Cocktail.container.data('masonry');
+
+    this.bindRemoveEvent();
+    this.bindEnlargeEvent();
+  },
+
+  bindRemoveEvent: function() {
+    $('#cocktail_grid').on('click', '.hide', function( event ) {
+      Cocktail.mason.remove( $(event.target).closest('.cocktail'));
+      Cocktail.mason.layout();
+    });
+  },
+
+  bindEnlargeEvent: function() {
+    $('#cocktail_grid').on('click', '.name', function( event ) {
+      console.log('click');
+      $('.gigante').removeClass('gigante');
+      $(this).closest('.cocktail').addClass("gigante");
+      var img = $(this).closest('.cocktail').find('img');
+
+      var src = img.attr('src');
+      img.attr('src', src.replace(/(c_fill,h_)\d{1,}(,w_)\d{1,}/,"$1500$2500"))
+    
+      Cocktail.mason.layout();
+    });
   }
 }
 
