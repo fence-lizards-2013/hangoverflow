@@ -3,9 +3,11 @@
 <div class="cocktail">
   
   <%= cl_image_tag(cocktail.image_id, width: size[0], height: size[1], :crop => :fill) %>
+
   <div class="name">
     <%= cocktail.name %>
   </div>
+
 
   <div class="votes">
     <%= cocktail.votes.count %> Votes
@@ -14,7 +16,4 @@
   <div class="hide">
     Hide
   </div>
-    
-  <%= link_to cocktail_path(cocktail) do %>
-  <% end %>
 </div>
