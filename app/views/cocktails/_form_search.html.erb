@@ -1,20 +1,24 @@
 <div id="overlay">
   <div id="modal">
-    <%= form_for :parameters, url: cocktails_search_path, remote: true do |f|  %>
+
+    
+    
       <div class="ingredients_wrapper">
-        <h2>Pick Some Ingredients</h2>
+        <%= form_for :parameters, url: cocktails_search_path, remote: true do |f|  %>
+        <h2><i class="icon-glass"></i> Pick Some Ingredients</h2>
         <% @ingredients.each_with_index do |ingredient, index| %>
 
-          <%= "<br></br>".html_safe if index%3 == 0 %>
+          <%= "<br>".html_safe if index%3 == 0 %>
           <div class="ingredient">
             <%= f.check_box "#{ingredient}" %>
             <%= f.label :name, "#{ingredient.titleize}" %>
           </div>
         <% end %>
-
-      </div>
-      <%= f.submit "Search", class: "pure-button-primary pure-button" %>
-      <%= link_to "Close" , "#", id: "close", class: "pure-button-warning" %>
+        <br>
+        <input type="submit"></input>
+        
+        <button id="close" type="text">Close</button>
     <% end %>
+      </div>
   </div>
 </div>

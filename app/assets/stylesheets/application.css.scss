@@ -13,7 +13,6 @@
 
 @import "normalize";
 @import "config";
-@import url(http://fonts.googleapis.com/css?family=Nixie+One);
 @import "cocktail";
 @import "forms";
 @import "home";
@@ -25,15 +24,15 @@ html {
 }
 
 header, h1, h2 {
-  font-family: "oriya mn", helvetica;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 form {
-  color: $plum_color;
+  color: $red;
 }
 
 body {
-  font-family: "Nixie One", helvetica;
+  font-family: 'Droid Sans', sans-serif;
   color: white;
   background-image: url("/img/backgroundchalk.jpg");
   background-size: cover;
@@ -44,7 +43,7 @@ a.brand {
 }
 
 .brand img{
-  height: 35px;
+  height: 100px;
 }
 
 /*ul.nav {
@@ -104,4 +103,29 @@ ul.nav li {
 a{
   text-decoration: none;
   color: #444;
+}
+
+.nav {
+  margin: 0 auto;
+  width: 90%;
+  line-height: 100px;
+  height: 100px;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.51);
+  border-radius: 10px;
+
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      float: right;
+      margin-right: 20px;
+
+      a {
+        font-size: 2em;
+      }
+    }
+  }
 }

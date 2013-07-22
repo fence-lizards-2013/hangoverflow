@@ -50,13 +50,17 @@ var Cocktail = {
 
   openSearchForm: function() {
     Cocktail.searchFormCenter();
-    $('.search_form_wrapper').fadeIn();
+    $('.search_form_wrapper').show();
+    $('#overlay').fadeIn();
+    $('#modal').show();
     $(window).on('resize.modal', Cocktail.searchFormCenter);
     $('#close').on('click', Cocktail.closeSearchForm);
   },
 
   closeSearchForm: function() {
     $('.search_form_wrapper').fadeOut();
+    $('#overlay').hide();
+    $('#modal').hide();
     $(window).unbind('resize.modal');
   },
 
@@ -73,7 +77,8 @@ var Grid = {
     Cocktail.container = $('#cocktail_grid');
     Cocktail.container.masonry({
       columnWidth: 1,
-      itemSelector: '.cocktail'
+      itemSelector: '.cocktail',
+      isFitWidth: true
     });
     Cocktail.mason = Cocktail.container.data('masonry')
   }
