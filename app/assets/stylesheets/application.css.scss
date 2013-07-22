@@ -24,7 +24,7 @@ html {
 }
 
 header, h1, h2, h3 {
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Nixie One', cursive;
 }
 
 form {
@@ -32,7 +32,7 @@ form {
 }
 
 body {
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Nixie One', cursive;
   color: white;
   background-image: url("/img/backgroundchalk.jpg");
   background-size: cover;
@@ -120,15 +120,28 @@ a{
     float: right;
     margin: 0;
     padding: 0;
+      line-height: 55px;
+  height: 55px;
 
+    li:hover {
+      background-color: darken(#515153,15%);
+    }
 
     li {
       display: inline-block;
-      margin-right: 20px;
+      margin: 0px 10px 0 10px;
+      padding: 0px 10px 0 10px;
+      border-radius: 4px; 
+      line-height: 55px;
+      height: 55px;
 
       a {
         color: #EAF7FF;
         font-size: 1.5em;
+        margin:0;
+        padding: 0;
+          line-height: 55px;
+  height: 55px;
       }
     }
   }
