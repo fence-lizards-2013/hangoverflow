@@ -8,7 +8,7 @@ ________________________
 Feature Checklist:
 
 - [x] User can add a recipe
-- [] User can vote on a recipe
+- [x] User can vote on a recipe
 - [] User can gather reputation
 - [] User can have their picture automatically added to their profile through gravatar
 - [] User can view another user's profile
