@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   has_many :cocktails, :dependent => :destroy
   has_many :authentications, :dependent => :destroy
 
+  # TODO-JW: use inject (stolen from Shadi)
   def update_reputation!
     reputation = 0
     cocktails.each do |cocktail|
