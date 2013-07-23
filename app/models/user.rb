@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :overage, :reputation
 
-  validate :is_overage?
+  validate :is_overage
 
   has_many :votes
   has_many :cocktails, :dependent => :destroy
@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
     self.save
   end
 
-  def is_overage?
+  def is_overage
     self.errors[:overage] = "You Must be 21 and over to progress" unless self.overage
   end
 

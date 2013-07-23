@@ -1,12 +1,16 @@
 <div id="profile">
-  <h1><%= @user.name %></h1>
-  <h3>Email: <%= @user.email %></h3>
-  <%= image_tag gravatar_url(@user.email) %>
 
-  <h3>Your Cocktails Recipes</h3>
+  <div class="info">
+    <h1><%= @user.name %></h1>
+    <h3>Email: <%= @user.email %></h3>
+    <%= image_tag gravatar_url(@user.email) %>
+  </div>
 
-  <div id="cocktail_grid">
-    <%= render @cocktails %>
+  <div class="cocktail_grid_wrapper">
+    <h1>Your Cocktails Recipes</h1>
+    <div id="cocktail_grid">
+      <%= render @cocktails %>
+    </div>
   </div>
 
 </div>

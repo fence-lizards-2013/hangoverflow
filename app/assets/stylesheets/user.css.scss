@@ -1,4 +1,27 @@
+@import "config";
+
 #profile{
-  margin: 0 auto;
-  width: 70%;
+  margin: 70px auto;
+  width: 90%;
+
+  .info {
+    width: 300px;
+    padding-left: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 50px;
+
+    img {
+      box-shadow: 10px 10px 5px rgba(19, 11, 11, 0.38);
+      border: 1px solid $gray_color;
+    }
+  }
+
+  .cocktail_grid_wrapper {
+    width: 75%;
+    padding-left: 20px;
+    border-left: 7px solid #413C3C;
+    display: inline-block;
+    vertical-align: top;
+  }
 }

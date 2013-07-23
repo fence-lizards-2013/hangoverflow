@@ -9,11 +9,11 @@ var Cocktail = {
 
   bindHover: function() {
     $('#cocktail_grid').on('mouseenter','.cocktail',function(){
-      $(this).find('.name, .votes').toggle('slide');
+      $(this).find('.options').slideDown();
     });
 
     $('#cocktail_grid').on('mouseleave','.cocktail',function(){
-      $(this).find('.name, .votes').toggle('slide');
+      $(this).find('.options').slideUp();
     });
   },
 

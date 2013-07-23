@@ -22,18 +22,6 @@ input[type=text], input[type=email], textarea, input[type='password'] {
   }
 }
 
-.centered  {
-  padding: 20px;
-  margin:3em auto;
-  border:1px solid #E3E4E5;
-  width:500px;
-  border-radius: 8px;
-  background-color: $form_color;
-
-  h2, h3, p{
-    color: $plum_color;
-  }
-}
 
 label, span {
     display: block;

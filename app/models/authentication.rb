@@ -4,4 +4,5 @@ class Authentication < ActiveRecord::Base
   belongs_to :user
   
   validates :uid, uniqueness: true
+  validates :user_id, :provider, presence: true
 end

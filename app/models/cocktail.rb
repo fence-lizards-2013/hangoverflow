@@ -6,7 +6,7 @@ class Cocktail < ActiveRecord::Base
   has_many :votes, :dependent => :destroy
   belongs_to :user
 
-  validates :user, :description, :name, :instructions, :presence => true
+  validates :user, :description, :name, :instructions, presence: true
 
   accepts_nested_attributes_for :ingredients, :reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true
 

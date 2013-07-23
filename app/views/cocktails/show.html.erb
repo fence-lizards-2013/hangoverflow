@@ -1,8 +1,8 @@
-<div class="cocktail_description">
+<div class="cocktail_detailed">
 
-	<div id="description_content">
-		<h1><%= @cocktail.name %></h1> 
-		<%= link_to 'Edit', edit_cocktail_path(@cocktail)  %><br>
+	<div id="cocktail_detailed_container">
+		<h1><%= @cocktail.name %></h1>
+		
 		<%= @cocktail.vote_score %> <%= link_to "Upvote", cocktail_votes_path(@cocktail), method: 'post' %>
 		<p><%= @cocktail.description %></p>
 		<ul>
@@ -12,6 +12,8 @@
 		</ul>
 
 		<p><%= @cocktail.instructions %></p>
+
+		<%= link_to 'Edit', edit_cocktail_path(@cocktail)  %><br>
 	</div>		
 </div>
 

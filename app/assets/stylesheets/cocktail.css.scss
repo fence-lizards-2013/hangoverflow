@@ -1,78 +1,51 @@
-.new_cocktail_form {
+@import "config";
 
-  .ingredient {
-    border: none;
-    padding: 0px;
-    position: relative;
-    margin-bottom: 9px;
+// Cocktail Create/Edit Form
+.form_container {
 
-    .field {
-      padding: 0;
+  width: 700px;
+  margin: 60px auto;
+
+  a {
+    color: $off_white;
+  }
+
+  .button {
+    border-radius: 5px;
+    padding: 9px;
+    background: $plum_color;
+    border: 1px solid darken($plum_color, 10%);
+    color: $off_white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 9px 0;
+
+    &:hover {
+      background: lighten($plum_color, 6%);
+      border: 1px solid lighten($plum_color, 2%);
     }
   }
 
-  .remove-ingredient {
-    position: absolute;
-    top: -7px;
-    right: 9px;
-    padding: 10px;
+  .button-large {
+    font-size: 16px;
   }
+
+  .button-small {
+    font-size: 12px;
+    padding: 6px;
+  }  
 }
 
-.ingredients {
-  padding: 20px 0;
-}
-
-.cocktails-new {
-
-  .container {
-    width: 700px;
-    border-radius: 8px;
-  }
-}
-
-
-/*css for cocktail display page here:*/
-
-.cocktail_description {
-  background-color: rgba(40, 40, 40, 0.6);
-  width: 20%;
-  min-width: 10em;
-  padding: 1em;
-}
-
-body.cocktails-show {
-  margin-left: 0;
-}
-
-body.cocktails-show div.container {
-  padding-left: 0px;
-}
-
-#description_content h1{
-  margin-top: 0px;
-}
-
-#description_content ul {
-  padding-left: .5em;
-}
-
-#description_content ul li{
-  list-style: none;
-  padding-bottom: .5em;
-}
-
+// Main Page and User Profile Cocktail Grid
 
 #cocktail_grid {
 
   .gigante {
-      img {
-        height: 500px;
-        width: 500px;
-    
-      }
-        }
-
+    img {
+      height: 500px;
+      width: 500px;
+    }
+  }
 
   .cocktail {
     margin: 10px;
@@ -84,34 +57,50 @@ body.cocktails-show div.container {
       border-radius: 5px;
     }
 
-    .name {
-      color: rgba(255,255,255,0.8);
-      cursor: pointer;
-      letter-spacing: 2px;
-      width: 95%;
-      position: absolute;
-      bottom: 140px;
-      background-color: rgba(0,0,0,0.7);
-      z-index: 500;
-      display: none;
-      text-transform: capitalize;
-      text-align: left;
-      padding-left: 10px;
-      font-size: 1.5em;
+    .options {
+      display: none
     }
 
-    .votes {
-      display: none;
-      color: rgba(255,255,255,0.8);
-      bottom: 100px;
-      width: 100px;
-      position: absolute;
-      background-color: rgba(0,0,0,0.7);
-      text-transform: capitalize;
-      text-align: left;
-      padding-left: 10px;
-      font-size: 1.5em;
+    .name, .votes, .hide {
+      display: inline-block;
     }
+    // .name {
+    //   color: rgba(255,255,255,0.8);
+    //   cursor: pointer;
+    //   letter-spacing: 2px;
+    //   width: 95%;
+    //   position: absolute;
+    //   bottom: 140px;
+    //   background-color: rgba(0,0,0,0.7);
+    //   z-index: 500;
+    //   display: none;
+    //   text-transform: capitalize;
+    //   text-align: left;
+    //   padding-left: 10px;
+    //   font-size: 1.5em;
+    // }
+
+    // .votes {
+    //   display: none;
+    //   color: rgba(255,255,255,0.8);
+    //   bottom: 100px;
+    //   width: 100px;
+    //   position: absolute;
+    //   background-color: rgba(0,0,0,0.7);
+    //   text-transform: capitalize;
+    //   text-align: left;
+    //   padding-left: 10px;
+    //   font-size: 1.5em;
+    // }
   }
     
+}
+
+// Cocktail Show Page
+
+.cocktail_detailed {
+  background-color: rgba(40, 40, 40, 0.6);
+  width: 20%;
+  min-width: 10em;
+  padding: 1em;
 }
