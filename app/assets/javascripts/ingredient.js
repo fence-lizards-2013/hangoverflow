@@ -3,6 +3,7 @@ $(document).ready(function(){
   $('form').on('click', '.remove-ingredient',Ingredient.removeFields);
 });
 
+// TODO-JW: refactor into a "form helper" or something
 var Ingredient = {
 
   addIngredient: function(e){

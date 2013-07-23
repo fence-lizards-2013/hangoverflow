@@ -1,3 +1,11 @@
+// TODO-JW: consider another literal to handle this kind of stuff
+var ViewController = {
+  loadCocktails: function() {},
+  centerSearchForm: function() {}
+};
+
+// TODO-JW: It seems to me that a Cocktail literal should only have things related
+// to an individual cocktail
 var Cocktail = {
   init: function(){
     $('.delete_cocktail').on('ajax:success', this.deleteCocktail);
@@ -18,25 +26,22 @@ var Cocktail = {
   },
 
   renderCocktails: function(event, response) {
-    console.log("Rendering Cocktails");
-      $('.search_form_wrapper').fadeOut();
-      $('#modal form')[0].reset();
+    $('.search_form_wrapper').fadeOut();
+    $('#modal form')[0].reset();
 
-      Cocktail.container.children().remove();
+    Cocktail.container.children().remove();
 
-      var fragment = document.createDocumentFragment();
-      var elems = [];
-      $.each($(response), function(index,elem) {
-        if (index%2 == 0) {
-          fragment.appendChild(elem);
-          elems.push(elem);
-        }
-      });
+    var fragment = document.createDocumentFragment();
+    var elems = [];
+    $.each($(response), function(index,elem) {
+      if (index%2 == 0) {
+        fragment.appendChild(elem);
+        elems.push(elem);
+      }
+    });
 
-      Cocktail.container.prepend( fragment );
-      Cocktail.mason.prepended( elems );
-
-  
+    Cocktail.container.prepend( fragment );
+    Cocktail.mason.prepended( elems );
   },
 
   getCocktails: function() {
