@@ -1,3 +1,5 @@
+// TODO-JW: this belongs in vendor assets, not here
+
 /*!
  * Masonry PACKAGED v3.0.3
  * Cascading grid layout library
