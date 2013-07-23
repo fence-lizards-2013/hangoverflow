@@ -1,3 +1,5 @@
+// TODO-JW: this belongs in vendor assets, not here
+
 /*!
  * classie - class helper functions
  * from bonzo https://github.com/ded/bonzo

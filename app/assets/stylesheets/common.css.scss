@@ -1,0 +1,98 @@
+@import "config";
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+
+body {
+  font-family: 'Nixie One', cursive;
+  color: white;
+  background-image: url("/img/backgroundchalk.jpg");
+  background-size: cover;
+  color: $off_white;
+
+  .container {
+    position: relative;
+    margin: 70px 0 20px 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+}
+
+.messages {
+
+  width:90%;
+  margin: 0 auto;
+
+  #flash_notice, #flash_alert {
+    padding: 5px;
+  }
+
+  #flash_notice {
+    border-radius: 4px;
+    background-color: $plum_color;
+    border: solid 1px darken($plum_color, 10%);
+  }
+
+  #flash_alert {
+    border-radius: 4px;
+    background-color: $red;
+    border: solid 1px darken($red, 10%);
+  }
+}
+
+.nav {
+
+  a.brand {
+    float: left;
+
+    img {
+      height: 100px;
+    }
+  }
+
+  padding:4px;
+  margin: 10px auto;
+  width: 90%;
+  line-height: 50px;
+  height: 50px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+    line-height: 50px;
+    height: 50px;
+    list-style: none;
+
+    li:hover {
+      background-color: darken(#515153,15%);
+    }
+
+    li {
+      display: inline-block;
+      margin: 0px 10px 0 10px;
+      padding: 0px 10px 0 10px;
+      border-radius: 4px; 
+      line-height: 55px;
+      height: 55px;
+
+      a {
+        color: #EAF7FF;
+        font-size: 1.5em;
+        margin:0;
+        padding: 0;
+        line-height: 50px;
+        height: 50px;
+      }
+    }
+  }
+}

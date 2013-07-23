@@ -5,6 +5,7 @@ module CocktailHelper
 
   def link_to_add_fields(name, f, association, html_options={})
     # name = Add Ingredient, f references form builder var f, association :ingredients
+    # TODO-JW: this == Ingredient.new (meta-programming)
     new_object = f.object.send(association).klass.new
     # f.object = @cocktail , send = f.object will 'send' (call) the assocition, so ingredients. summary = @cocktail.ingredients
     # klass = class Ingredient, object you want to initialize

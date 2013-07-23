@@ -2,7 +2,7 @@ class Cocktail < ActiveRecord::Base
 
   attr_accessible :description, :instructions, :name, :ingredients_attributes, :user_id, :vote_score, :image_id
 
-  has_many :ingredients, :dependent => :destroy, inverse_of: :cocktail
+  has_many :ingredients, :dependent => :destroy, :inverse_of => :cocktail
   has_many :votes, :dependent => :destroy
   belongs_to :user
 
